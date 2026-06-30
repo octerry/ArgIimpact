@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: Aerosoldier;
+    src: url('source/AerosoldierBasic_PERSONAL_USE_ONLY.otf');
+}
+@font-face {
+    font-family: Chalkduster;
+    src: url('source/Chalkduster.ttf');
+}
+@font-face {
+    font-family: Ransom;
+    src: url('source/ransom-expert.otf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #2B2B2B;
+
+    overflow: hidden;
+}
+
+#taniereCouverture {
+    position: absolute;
+    z-index: 10;
+    right: calc(50% + 300px);
+    top: 50%;
+
+    height: 150vh;
+
+    pointer-events: none;
+    
+    transform: translateY(-50%) rotate(20deg);
+}
+
+#textPart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 400px;
+
+    color: #fff;
+    
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: Aerosoldier;
+    font-weight: 100;
+    font-size: 80px;
+
+    margin: 0;
+
+    color: #DC5FA0;
+}
+
+h1 span {
+    font-family: Ransom;
+    color: #fff;
+}
+
+h2 {
+    font-family: Chalkduster;
+    font-weight: 100;
+    font-size: 40px;
+
+    margin: 0;
+}
+
+#codePart {
+    padding: 30px 20px;
+    max-width: 100%;
+
+    background-image: url('source/fondStylise.svg');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+h3 {
+    font-family: Poppins;
+    font-size: 20px;
+
+    color: #048B95;
+
+    margin: 0;
+}
+
+p {
+    font-family: Poppins;
+    font-size: 13px;
+
+    margin-top: 0;
+}
+
+a {
+    font-family: Chalkduster;
+    text-align: center;
+
+    color: #E9C918;
+    text-shadow: 2px 2px 0 #048B95;
+
+    margin-bottom: 10px;
+
+    transition: transform .2s ease-in-out, text-shadow .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        text-shadow: 0 0 10px #048B95;
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+}
+
+#circle1 img {
+    animation: clockwiseRotation 20s infinite linear;
+}
+
+#circle2 img {
+    animation: clockwiseRotation 30s infinite linear;
+}
+
+#circle3 img {
+    animation: clockwiseRotation 55s infinite linear;
+}
+
+#inputSection {
+    background-color: #E9C918;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#input1 {
+    border: 5px #DC5FA0 solid;
+    border-radius: 10px;
+
+    width: 100px;
+    height: 25px;
+
+    background-color: #2B2B2B;
+
+    font-family: Chalkduster;
+    font-size: 20px;
+    color: #fff;
+}
+
+#input2 {
+    border: 5px #048B95 solid;
+    border-radius: 10px;
+
+    width: 60px;
+    height: 25px;
+
+    background-color: #2B2B2B;
+    
+
+    font-family: Chalkduster;
+    font-size: 20px;
+    color: #fff;
+}
+
+@keyframes clockwiseRotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes antiClockwiseRotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
