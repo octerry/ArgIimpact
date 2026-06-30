@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: Aerosoldier;
+    src: url('source/AerosoldierBasic_PERSONAL_USE_ONLY.otf');
+}
+@font-face {
+    font-family: Chalkduster;
+    src: url('source/Chalkduster.ttf');
+}
+@font-face {
+    font-family: Ransom;
+    src: url('source/ransom-expert.otf');
+}
+
+:root {
+    --backgroundColor : #2B2B2B;
+    --borderColor : #fff;
+
+    animation: bgAnimation 6s infinite linear;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    border: 2vh var(--borderColor) solid;
+
+    overflow: hidden;
+}
+
+#soundButton {
+    margin: 2vh;
+}
+
+svg {
+    width: 10vh;
+
+    transition: transform .3s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}
+
+#sound.muted {
+    display: none;
+}
+
+#muted {
+    display: none;
+}
+
+#muted.muted {
+    display: block;
+}
+
+#dancingMiddle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 40vh;
+    max-width: 90vw;
+
+    transform: translate(-50%, -50%);
+}
+
+.dancing {
+    position: absolute;
+    left: -100%;
+}
+
+#ditto0 {
+    top: 2vh;
+    animation: leftToRight 5s infinite linear;
+    height: 20vh;
+}
+
+#ditto1 {
+    top: 50vh;
+    animation: rightToLeft 5s infinite linear 1s;
+    opacity: .3;
+    height: 30vh;
+}
+
+#ditto2 {
+    top: 58vh;
+    animation: rightToLeft 20s infinite linear 5s;
+    height: 10vh;
+}
+
+#ditto3 {
+    top: 80vh;
+    animation: leftToRight 10s infinite linear 1s;
+    height: 16vh;
+    opacity: .7;
+}
+
+#ditto4 {
+    top: 30vh;
+    animation: leftToRight 5s infinite linear 2s;
+    height: 16vh;
+}
+
+#ditto5 {
+    top: 10vh;
+    animation: rightToLeft 10s infinite linear 1s;
+    height: 16vh;
+    opacity: .7;
+}
+
+@keyframes bgAnimation {
+    0% {
+        --backgroundColor : #2B2B2B;
+        --borderColor : #fff;
+    }
+    10% {
+        --backgroundColor : #77bdf1;
+        --borderColor : #f9e58a;
+    }
+    20% {
+        --backgroundColor : #d89956;
+        --borderColor : #9fb64e;
+    }
+    30% {
+        --borderColor : #d253db;
+    }
+    40% {
+        --backgroundColor : #1614a9;
+        --borderColor : #4b2ed5;
+    }
+    50% {
+        --borderColor : #ff7910;
+    }
+    60% {
+        --backgroundColor : #d9413a;
+        --borderColor : #a8f4db;
+    }
+    70% {
+        --backgroundColor : #db5e46;
+        --borderColor : #ffd66b;
+    }
+    80% {
+        --backgroundColor : #04ae53;
+        --borderColor : #d89397;
+    }
+    90% {
+        --backgroundColor : #bd7aff;
+        --borderColor : #4a79b5;
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -100%;
+    }
+}
