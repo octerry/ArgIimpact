@@ -42,6 +42,8 @@ a {
     display: flex;
 
     margin: 2vh;
+    
+    width: fit-content;
 
     z-index: 100;
 }
